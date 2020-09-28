@@ -22,7 +22,9 @@ import com.example.demo.Item.ItemClient;
 @EnableDiscoveryClient
 @EnableZuulProxy
 
+
 @RestController
+
 public class GoodItemApiAdapterRestController {
 
 	

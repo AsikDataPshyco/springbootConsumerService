@@ -2,15 +2,14 @@ package com.example.demo;
 
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.hateoas.Resources;
+import org.springframework.hateoas.CollectionModel;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import lombok.Data;
 
 @EnableFeignClients
-
+ 
 @Data //to sting mehods
-
 public class Item {
 	
 	public String name;
@@ -27,9 +26,9 @@ public class Item {
 	public interface ItemClient {
 		 
 		 @GetMapping("/items")
-		 Resources<Item> readItems();			
+		 CollectionModel<Item> readItems();			
 			 
 		 }
-	public Item(){}
+	
 
 }
